@@ -92,10 +92,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'quizvizz',
-    #     "CLIENT": {
-    #         'host': 'mongodb://admin:admin_password@52.66.247.136:27017/',
+        "CLIENT": {
+            'host': 'mongodb://admin:admin_password@13.235.82.54:27017/',
        
-    #    }
+       }
     }
 
 }
@@ -155,7 +155,7 @@ REST_FRAMEWORK = {
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://52.66.247.136:3000", # Replace with the origin of your React app
+    "http://13.235.82.54:3000", # Replace with the origin of your React app
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
