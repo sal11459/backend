@@ -196,6 +196,8 @@ class UserDeleteView(View):
         try:
             user = CustomUser.objects.get(id=user_id)
             user.delete()
+            data = QuestionHistory.objects.get(user=user_id)
+            data.delete()
             return Response(status=status.HTTP_204_NO_CONTENT) 
         except CustomUser.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
